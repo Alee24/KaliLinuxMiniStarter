@@ -1,0 +1,17 @@
+#!/bin/bash
+# This will Install the "Start" Command in the bashrc file
+echo "Removing start command....
+Removing .bashrc...."
+cd $Home && cp /opt/scripts/bin/.Ubashrc .bashrc
+echo "[ OK ] Done ..."
+echo "Removing Directories...
+80%..."
+cd /
+rm -r /opt/scripts
+echo "
+===============================================
+Uninstall Complete:
+:-( Too bad
+Adios
+===============================================
+"

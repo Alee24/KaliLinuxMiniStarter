@@ -1,0 +1,65 @@
+#!/bin/bash
+#By Alee K Mettoh
+#implemented to speed up kali linux basic operations prior to hacking
+
+###########################################################################
+# Catch ctrl+c from user
+
+##########################################################################
+while true
+do 
+clear
+printf '\e[8;50;74t'
+echo "==================================================================="
+
+echo -e "\e[1;32m
+========================Kali Linux Mini Starter========================
+                                                                       |
+   █████╗ ██╗   ██╗████████╗ ██████╗       ██████╗  ██████╗ ████████╗  |
+  ██╔══██╗██║   ██║╚══██╔══╝██╔═══██╗      ██╔══██╗██╔═══██╗╚══██╔══╝  |
+  ███████║██║   ██║   ██║   ██║   ██║█████╗██████╔╝██║   ██║   ██║     |
+  ██╔══██║██║   ██║   ██║   ██║   ██║╚════╝██╔══██╗██║   ██║   ██║     |
+  ██║  ██║╚██████╔╝   ██║   ╚██████╔╝      ██████╔╝╚██████╔╝   ██║     |
+  ╚═╝  ╚═╝ ╚═════╝    ╚═╝    ╚═════╝       ╚═════╝  ╚═════╝    ╚═╝     |
+                                                                       |
+======================================================================= \e[0m"        
+ echo "
+             `tput setf 4`         Kali Linux Mini Starter           `tput rmso``tput setf 0`
+             ` tput setf 1`[*]    Simple Automation scripts      [*]`tput setf 0`
+             ` tput setf 1`[*]     Written By Alee K Mettoh      [*]`tput setf 0`
+             ` tput setf 1`[*]  Find me On twitter @Joker_Alee   [*]`tput setf 0`
+             ` tput setf 1`[*]   Email: mettoalex@gmail.com      [*]`tput setf 0`
+"
+
+echo -e "\e[1;36mMenu Items \e[0m "
+echo "==================================================================="
+echo -e "\e[1;37m Start Menu..                                                      |
+===================================================================
+0)Start Basic services                                             |
+1)Programs                                                         |
+2)Linux Update                                                     |
+3)Add Programs                                                     |
+4)System Tools                                                     |
+5)Start all Services                                               |
+6)Stop all services                                                |
+7)Install Themes                                                   |
+                                                                   |
+90)Uninstall (KLMS)                                                |
+===================================================================
+\e[0m"
+echo -e "\e[1;36mRun: \e[0m"
+read n
+case $n in
+0) service postgresql start && service metasploit start;;
+1) /opt/scripts/Modules/load_tools;;
+2) apt-get update && apt-get upgrade;;
+3) /opt/scripts/Modules/downloads/install_tools;;
+4) /opt/scripts/Modules/systools;;
+5) /opt/scripts/Modules/service_opt;;
+6) service postgresql stop && service metasploit stop && service mysql stop && /etc/init.d/apache2 stop && /opt/script/startmenu;;
+7) apt-get install gnome-tweak-tool && /opt/scripts/Modules/themes;;
+90) /opt/scripts/uinjector;;
+*)invalid option;;
+
+esac
+done

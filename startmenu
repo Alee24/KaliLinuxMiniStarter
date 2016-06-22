@@ -1,0 +1,51 @@
+#!/bin/bash
+#By Alee K Mettoh
+#implemented to speed up kali linux basic operations
+###########################################################################
+# Catch ctrl+c from user
+
+########################################################################
+while true
+do 
+echo "====================================================================="
+echo -e "\e[1;32m
+==========================Akme Framework============================="
+echo -e "\e[1;36mMenu Items                                                         \e[0m "
+echo "====================================================================="
+echo -e "\e[1;33m Start Menu..
+===================================================================
+0)Start Basic services                                             |
+1)Programs                                                         |
+2)Linux Update                                                     |
+3)Add Programs                                                     |
+4)System Tools                                                     |
+5)Start all Services                                               |
+6)Stop all services                                                |
+7)Install Themes                                                   |
+
+9)Back
+===================================================================
+\e[0m"
+echo -e "\e[1;36mRun: \e[0m"
+read n
+case $n in
+0) service postgresql start && service metasploit start;;
+1) /opt/scripts/Modules/load_tools;;
+2) apt-get update && apt-get upgrade;;
+3) /opt/scripts/Modules/downloads/install_tools;;
+4) /opt/scripts/Modules/systools;;
+5) /opt/scripts/Modules/startserv;;
+6) service postgresql stop && service metasploit stop && service mysql stop && /etc/init.d/apache2 stop && service tor stop && echo "
+Services Stopped 
+======================
+-PostgreSQL
+-Metasploit
+-Apache
+-Mysql
+-Tor
+";;
+7) apt-get install gnome-tweak-tool && /opt/scripts/Modules/themes;;
+9) /opt/scripts/start;;
+*)invalid option;;
+esac
+done
