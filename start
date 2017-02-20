@@ -27,7 +27,7 @@ echo -e "\e[1;32m
              `tput setf 4`         Kali Linux Mini Starter           `tput rmso``tput setf 0`
              ` tput setf 1`[*]    Simple Automation scripts      [*]`tput setf 0`
              ` tput setf 1`[*]     Written By Alee K Mettoh      [*]`tput setf 0`
-             ` tput setf 1`[*]  Find me On twitter @Joker_Alee   [*]`tput setf 0`
+             ` tput setf 1`[*]  Find me On twitter @m3ttoh   [*]`tput setf 0`
              ` tput setf 1`[*]   Email: mettoalex@gmail.com      [*]`tput setf 0`
 "
 
