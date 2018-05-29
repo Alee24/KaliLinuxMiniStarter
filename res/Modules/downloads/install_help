@@ -1,0 +1,131 @@
+#!/bin/bash
+echo -e "\e[1;36m  TOOL INSTALLATION HELP \e[0m"
+echo -e "\e[1;36m |======================| \e[0m"
+echo -e "\e[1;36m Info from Hackers Playbook.pdf \e[0m"
+
+echo -e "
+
+Kali is a Linux penetration distribution (or “distro” for short), which contains a lot of the common
+tools utilized for penetration testing. This is probably seen as the standard right now in the security
+community and many people are building off this framework. I agree that Kali does have a lot of the
+tools that’d I typically use, but I added a few tools of my own. Some of the binaries like Windows
+Credential Editor (WCE) might already be on the Kali distro, but I like to make sure that I am
+downloading the most recent version. I try to also make sure to keep the binaries I modify to evade
+AV in a separate folder so that they don’t get overwritten.
+I also want to note, that there are a lot of other different good distros out there. One distro I would
+recommend you to check out is called Pentoo (http://www.pentoo.ch/). Let’s start to dive into the
+Kali Distro.
+
+High level tools list additional to Kali:
+-------------------------------------------------------------------------------------------------------
+	Discover Scripts (formally Backtrack Scripts)
+	SMBexec
+	Veil
+	WCE
+	Mimikatz
+	Password Lists
+	Burp
+	PeepingTom	
+	gnmap.pl
+	PowerSploit	
+	Responder
+	Responder
+	Firefox
+	   o Web Developer Add-on
+	   o Tamper Data
+	   o Foxy Proxy
+	   o User Agent Switcher
+
+
+Setting up Kali:
+----------------
+There are many different ways you can set up your attacker host, you should try to configure your host with the
+following settings. Remember that tools do periodically change and that you might need to make small
+tweaks to these settings or configurations.
+You should have installed 
+
+
+Install Discover Scripts (originally called Backtrack-scripts)
+	a. Discover is used for Passive Enumeration
+	b. cd/opt/
+	d. cd discover/
+	e. ./setup.sh
+	
+Install Smbexec
+	a. Smbexec will be used to grab hashes out of the Domain Controller and reverse shells
+	b. cd/opt/
+	d. cd smbexec
+	e. ./install.sh
+	i. Choose number 1
+	f. Install to/opt
+	g. ./install.sh
+	i. Choose number 4
+
+Install Veil
+	a. Veil will be used to create python based Meterpreter executable
+	b. cd/opt/
+	d. cd ./Veil/setup
+	e. ./setup.sh
+
+Download WCE
+	a. Windows Credential Editor (WCE) will be used to pull passwords from memory
+	b. cd /opt/
+	d. unzip -d ./wce wce_v1_41beta_universal.zip
+
+Download Mimikatz
+	a. Mimikatz will be used to pull passwords from memory
+	b. cd ~/Desktop
+	c. wget http://blog.gentilkiwi.com/downloads/mimikatz_trunk.zip
+	d. unzip -d./mimikatz mimikatz_trunk.zip
+
+Saving Custom Password Lists
+	a. Password lists for cracking hashes
+	b. cd ~/Desktop
+	c. mkdir ./password_list && cd ./password_list
+	d. Download large password list via browser and save to ./password_list:
+	https://mega.co.nz/#!3VZiEJ4L!TitrTiiwygI2I_7V2bRWBH6rOqlcJ14tSjss2qR5dqo
+	e. gzip -d crackstation-human-only.txt.gz
+	f. wget http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2
+	g. bzip2 -d rockyou.txt.bz2
+
+Peepingtom will be used to take snapshots of webpages
+	b. cd/opt/
+	d. cd ./peepingtomf. 
+        e. wget https://phantomjs.googlecode.com/files/phantomjs1.9.2-linux-i686.tar.bz2
+	g. tar xvjf phantomjs-1.9.2-linux-i686.tar.bz2
+	h. cp ./phantomjs-1.9.2-linux-i686/bin/phantomjs .
+
+Adding Nmap script
+	a. The banner-plus.nse will be used for quicker scanning and smarter identification
+	b. cd/opt/
+	c. cp banner-plus.nse /usr/share/nmap/scripts/banner-plus.nse
+
+Installing PowerSploit
+	a. PowerSploit are PowerShell scripts for post exploitation
+	b. cd/opt/PowerSploit
+	e. wget https://raw.github.com/obscuresec/random/master/StartListener.py
+	f. wget https://raw.github.com/darkoperator/powershell_scripts/master/ps_encoder.py
+
+Install bypassuac
+	a. Will be used to bypass UAC in the post exploitation sections
+	b. cd/opt/
+	d. unzip bypassuac.zip
+	e. cp bypassuac/bypassuac.rb/opt/metasploit/apps/pro/msf3/scripts/meterpreter/
+	f. mv bypassuac/uac//opt/metasploit/apps/pro/msf3/data/exploits/
+
+Installing Fuzzing Lists (SecLists)
+ 	a. These are scripts to use with Burp to fuzz parameters
+ 	b. cd/opt/
+	c. git clone https://github.com/danielmiessler/SecLists.git
+
+Installing Firefox Addons
+ 	a. Web Developer Add-on: https://addons.mozilla.org/en-US/firefox/addon/web-developer/
+ 	b. Tamper Data: https://addons.mozilla.org/en-US/firefox/addon/tamper-data/
+ 	c. Foxy Proxy: https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
+	d. User Agent Switcher: https://addons.mozilla.org/en-US/firefox/addon/user-agent-
+switcher/
+
+
+
+"
+

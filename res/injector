@@ -1,0 +1,10 @@
+#!/bin/bash
+# This will Install the "Start" Command in the bashrc file
+cd $Home && cp /opt/scripts/bin/.bashrc .bashrc
+echo "start Command Installed. You will be able to acces the scripts by typing start on the terminal"
+echo "
+===============================================
+Feel free to change/update/Modify the scripts..
+Enjoy
+===============================================
+"

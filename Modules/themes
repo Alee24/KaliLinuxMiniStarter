@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Gnome-Tweak-Tool Installed..."
+echo "Loading gnome-tweak-tool..."
+/usr/bin/gnome-tweak-tool
+echo "Adios!!"
+/opt/scripts/startmenu
+
+

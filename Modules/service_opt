@@ -1,0 +1,16 @@
+#!/bin/bash 
+service postgresql start
+service metasploit start
+/etc/init.d/apache2 start
+service mysql start
+/etc/init.d/apache2 start
+service tor start
+
+echo "
+Services Started
+================
+-Metasploit
+-Apache
+-Mysql
+================
+"

@@ -1,0 +1,74 @@
+#!/bin/bash 
+while true
+do
+echo "====================================================================="
+
+echo -e  "\e[1;32m Programs Menu..
+=====================================================================
+
+1)Metasploit
+2)Armitage
+3)SEToolkit
+4)Wireshark
+5)Zed attack Proxy
+6)Burpsuite
+7)Fern Wifi Cracker
+8)Maltego
+9)Johnny
+10)Zenmap
+11)Tor
+12)BeEF
+
+99)<<Back
+\e[0m "
+echo -e "\e[1;36mRun \e[0m "
+
+read n
+case $n in
+1) gnome-terminal -e msfconsole && echo "
+=============================================
+msfconsole running on the This Terminal
+=============================================";;
+2) gnome-terminal -e armitage && echo "
+=============================================
+Armitage running on the opened Terminal
+=============================================";;
+3) gnome-terminal -e setoolkit && echo "
+=============================================
+SET running on the opened Terminal
+=============================================";;
+4) gnome-terminal -e wireshark && echo "
+=============================================
+Wireshark running from the opened Terminal
+=============================================";;
+5) gnome-terminal -e /usr/bin/owasp-zap && echo "
+=============================================
+Owasp-Zap running from the opened Terminal
+=============================================";;
+6) gnome-terminal -e /usr/bin/burpsuite.jar && echo "
+=============================================
+Burpsuit running from the opened Terminal
+=============================================";;
+7) gnome-terminal -e /usr/bin/fern-wifi-cracker && echo "
+=============================================
+Fern running from the opened Terminal
+=============================================";;
+8) gnome-terminal -e /usr/bin/maltego && echo "
+=============================================
+Maltego running from the opened Terminal
+=============================================";;
+9) gnome-terminal -e /usr/bin/johnny && echo "
+=============================================
+<johnny running from the opened Terminal
+=============================================";;
+10) gnome-terminal -e /usr/bin/zenmap && echo "
+=============================================
+Zenmap running from the opened Terminal
+=============================================";;
+11) /opt/scripts/Modules/tor;;
+12) gnome-terminal -e /opt/scripts/Modules/beef && echo "BeEf Running [ OK ]";;
+99) /opt/scripts/startmenu;;
+
+*)invalid option;;
+esac
+done

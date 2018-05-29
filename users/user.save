@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo -e "\e[1;36mWelcome to Kali Linux Mini Starter \e[0m"
+echo "Enter your Name:$NAME "
+read $NAME

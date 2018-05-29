@@ -1,0 +1,26 @@
+#!/bin/bash
+#this handles Tor
+while true
+do
+echo "=================================================================="
+echo -e "\e[1;32m Tor Menu..                                       
+==================================================================
+1)Start Tor
+2)Activate Tor Browsing
+3)Stop Tor
+
+99)<<Back
+==================================================================
+\e[0m"
+echo -e "\e[1;36mLOAD: \e[0m"
+read n
+case $n in
+1) service tor start && echo "Tor Service Started";;
+2) echo "Opening proxychains..." && proxychains iceweasel;;
+3) service tor stop && echo "Tor Service Stopped..";;
+99) /opt/scripts/Modules/load_tools;;
+
+*)invalid option;;
+
+esac
+done

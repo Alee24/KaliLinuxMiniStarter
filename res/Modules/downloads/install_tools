@@ -1,0 +1,52 @@
+#!/bin/bash
+#this script will install additional Tools to your Box
+while true
+do
+echo "====================================================================="
+echo -e "\e[1;32m Add Programs Menu....
+ Requires Internet Connection...
+=====================================================================
+0)Tor
+1)Discover Scripts
+2)SMBexec
+3)Veil
+4)WCE
+5)mimikatz
+6)Password Lists
+7)Peeping Tom
+8)gnmap.pl
+9)Powersploit
+10)Responder
+11)Browser Addons
+12)Fuzzing Lists
+13)Bypassuac
+14)Enable Metasploit Logging
+20)How To Configure..
+
+99)<<Back
+\e[0m
+"
+echo -e "\e[1;36mInstall: \e[0m"
+read n
+case $n in
+0) apt-get install tor && service tor start && echo "Tor Installed and Activated..[ OK ]";;
+#1) cd /opt/ && cp test.txt /opt/test1.txt;;
+1) cd /opt/ && git clone https://github.com/leebaird/discover.git;;
+2) cd /opt/ && git clone https://github.com/leebaird/discover.git;;
+3) cd /opt/ && git clone https://github.com/veil-evasion/Veil.git;;
+4) cd /opt/ && wget http://www.ampliasecurity.com/research/wce_v1_41beta_universal.zip && unzip -d ./wce wce_v1_41beta_universal.zip;;
+5) cd /opt/ && wget http://blog.gentilkiwi.com/downloads/mimikatz_trunk.zip && unzip -d./mimikatz mimikatz_trunk.zip;;
+6) cd /opt/ && wget http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2;;
+7) cd /opt/ && git clone https://bitbucket.org/LaNMaSteR53/peepingtom.git;;
+8) cd /opt/ wget https://raw.github.com/hdm/scan-tools/master/nse/banner-plus.nse;;
+9) cd /opt/ && git clone https://github.com/mattifestation/PowerSploit.git;;
+10) cd /opt/ && git clone https://github.com/SpiderLabs/Responder.git;;
+11) /opt/scripts/Modules/downloads/Addons;;
+12) cd /opt/ && git clone https://github.com/danielmiessler/SecLists.git;; 
+13) cd /opt/ && wget http://www.secmaniac.com/files/bypassuac.zip && unzip bypassuac.zip;; 
+14) echo “spool/root/msf_console.log” >/root/.msf4/msfconsole.rc && echo "echo “logs can be found in /root/.msf4/msfconsole.rc";; 
+20) /opt/scripts/Modules/downloads/install_help && echo "Read the above Document for installation Instructions";;
+99) /opt/scripts/startmenu;;
+*)invalid option;;
+esac
+done

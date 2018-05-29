@@ -1,0 +1,42 @@
+#!/bin/bash
+chmod +x setup.sh
+chmod +x injector
+chmod +x start
+chmod +x startmenu
+chmod +x uinjector
+cd Modules
+chmod +x beef
+chmod +x load_tools
+chmod +x service_opt
+chmod +x startserv
+chmod +x systools
+chmod +x themes
+chmod +x tor
+cd downloads
+chmod +x Addons
+chmod +x install_help
+chmod +x install_tools
+chmod +x update.sh
+cd ../..
+cd res
+chmod +x setup.sh
+chmod +x injector
+chmod +x start
+chmod +x startmenu
+chmod +x uinjector
+cd Modules
+chmod +x beef
+chmod +x load_tools
+chmod +x service_opt
+chmod +x startserv
+chmod +x systools
+chmod +x themes
+chmod +x tor
+cd ..
+cd downloads
+chmod +x Addons
+chmod +x install_help
+chmod +x install_tools
+chmod +x update.sh
+
+

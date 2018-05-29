@@ -1,0 +1,4 @@
+#!/bin/bash
+cd /usr/share/beef-xss
+echo "BeEF is Loading on this Terminal, Press ctrl+c to stop!"
+./beef

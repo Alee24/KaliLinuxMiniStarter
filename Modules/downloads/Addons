@@ -1,0 +1,31 @@
+#!/bin/bash
+#This Addons shoulb be installed in your Defaulf Browser
+while true
+do
+echo -e "\e[1;32m ======================================================================= \e[0m"
+echo -e "\e[1;33m Open and  this Links on your Default Browser(iceweasel/firefox \e[0m)"
+echo -e "\e[1;33m           Install the Addons and restart the browser \e[0m"
+echo -e "\e[1;32m ======================================================================= \e[0m"
+echo "Web Developer Add-on:"
+echo "   https://addons.mozilla.org/en-US/firefox/addon/web-developer/"
+echo 
+echo "Tamper Data:"
+echo "   https://addons.mozilla.org/en-US/firefox/addon/tamper-data/"
+echo
+echo "Foxy Proxy:"
+echo "   https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/"
+echo
+echo "User Agent Switcher:"
+echo "   https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/"
+echo -e "\e[1;32m ======================================================================= \e[0m"
+echo -e  "\e[1;34m  
+99)Exit
+\e[0m "
+echo -e "\e[1;36mExit \e[0m "
+
+read n
+case $n in
+99) /opt/scripts/Modules/downloads/install_tools;;
+*)invalid option;;
+esac 
+done

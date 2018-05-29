@@ -1,0 +1,30 @@
+#!/bin/bash
+#just other commands on linux :-)
+
+#!/bin/bash 
+while true
+do
+echo "====================================================================="
+echo -e  "\e[1;35m Tools Menu..
+=====================================================================
+
+1)Running Process tree
+2)Login attempts
+3)Online Users
+4)routing table
+5)Change Password
+
+99)<<Back
+
+\e[0m "
+read n
+case $n in
+1) pstree;;
+2) lastlog;;
+3) users;;
+4) route;;
+5) passwd;;
+99) /opt/scripts/startmenu;;
+*)invalid option;;
+esac
+done
