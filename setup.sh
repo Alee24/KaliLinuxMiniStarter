@@ -28,7 +28,7 @@ echo -e "\e[1;36m
 	++++++++++++++++++++++++++++++++
      	+   Scripts By Alee K Mettok   +
 	+   Email:mettoalex@gmail.com  +
-	+   Facebook: Alee K Mettoh    +
-        +   Twitter:Joker_Alee         +
+	+   Facebook: Alex K Mettoh    +
+        +   Twitter:@m3ttoh         +
 	++++++++++++++++++++++++++++++++
 =========================================================== \e[0m"
